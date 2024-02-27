@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+body {
+    background: linear-gradient(45deg, #f06291, #fffde7);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.calculator {
+    position: relative;
+    height: auto;
+    width: 330px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgb(187, 130, 130);
+    background-color: #fff;
+
+
+}
+
+#display {
+    color: #3b6e7c;
+    margin: 0 10px;
+    height: 100px;
+    width: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    overflow: hidden;
+    border-bottom: #c3eeff 2px solid;
+}
+
+#equal {
+    height: 130px;
+}
+
+#clear {
+    background-color: #ffd5d8;
+    color: #fc4552;
+}
+
+.btn-number {
+    background-color: #c3eeff;
+    color: #3b6e7c;
+}
+
+.btn-operator {
+    background-color: #ffd0fb;
+    color: #e041db;
+}
+
+.btn-equal {
+    background-color: #d7adff;
+    color: #6d1f9b;
+}
+
+.theme-toggler {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+.theme-toggler::before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #4d2c81;
+    z-index: -1;
+}
+
+.theme-toggler .active {
+    color: #4d2c81;
+
+}
+
+.theme-toggler.active::before {
+    background-color: #f0db4f;
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* tema oscuro */
+
+.dark {
+    background-color: #1b1b1b;
+
+}
+
+.dark #display {
+    color: plum;
+    border-bottom: #4d2c81 2px solid;
+}
+
+.dark #clear {
+    color: plum;
+    background-color: purple;
+
+}
+
+.dark .btn-number {
+    background-color: rebeccapurple;
+    color: plum;
+}
+
+.dark .btn-operator {
+    background-color: purple;
+    color: rgb(111, 177, 95);
+}
+
+.dark .btn-equal {
+    background-color: rgb(88, 47, 107);
+    color: rgb(97, 182, 76);
+}
